@@ -384,7 +384,7 @@ namespace Schedule
             autoCheck.AutoSize = true;
             autoCheck.Checked = true;
             autoCheck.CheckState = CheckState.Checked;
-            autoCheck.Location = new Point(12, 299);
+            autoCheck.Location = new Point(12, 300);
             autoCheck.Name = "autoCheck";
             autoCheck.Size = new Size(124, 19);
             autoCheck.TabIndex = 3;
@@ -399,6 +399,9 @@ namespace Schedule
             Controls.Add(infoLabel);
             Controls.Add(flowLayoutPanel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
+            MaximumSize = new Size(642, 362);
+            MinimumSize = new Size(642, 362);
             Name = "Form1";
             Text = "Розклад";
             FormClosing += Form1_FormClosing;

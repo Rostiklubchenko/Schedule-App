@@ -18,19 +18,19 @@ namespace Schedule
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new Form1());
-            bool createdNew;
-            using (var mutex = new System.Threading.Mutex(true, "MyUniqueMutexName", out createdNew))
-            {
-                if (createdNew)
-                {
+            //bool createdNew;
+            //using (var mutex = new System.Threading.Mutex(true, "MyUniqueMutexName", out createdNew))
+            //{
+            //    if (createdNew)
+            //    {
                     Application.Run(new Form1());
-                }
-                else
-                {
-                    // ѕриложение уже запущено, активируем его окно
-                    ProcessCurrentInstance();
-                }
-            }
+            //    }
+            //    else
+            //    {
+            //        // ѕриложение уже запущено, активируем его окно
+            //        ProcessCurrentInstance();
+            //    }
+            //}
         }
 
         private static void ProcessCurrentInstance()

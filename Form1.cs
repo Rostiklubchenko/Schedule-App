@@ -50,11 +50,6 @@ namespace Schedule
 
             Update();
 
-            int weekNumber = GetIso8601WeekOfYear(currentDate);
-            bool isOddWeek = weekNumber % 2 != 0;
-            if (isOddWeek) infoLabel.Text += ", верхній тиждень";
-            else infoLabel.Text += ", нижній тиждень";
-
             System.Timers.Timer timer = new()
             {
                 Interval = 1000
@@ -245,6 +240,11 @@ namespace Schedule
                 case 11: infoLabel.Text += $"Листопад, {currentDate.Day}"; break;
                 case 12: infoLabel.Text += $"Грудень, {currentDate.Day}"; break;
             }
+
+            int weekNumber = GetIso8601WeekOfYear(currentDate);
+            bool isOddWeek = weekNumber % 2 != 0;
+            if (isOddWeek) infoLabel.Text += ", верхній тиждень";
+            else infoLabel.Text += ", нижній тиждень";
         }
 
         private void NotifyIcon1_DoubleClick(object? sender, EventArgs e)
